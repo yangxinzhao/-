@@ -1,0 +1,43 @@
+selenium3.14+python3.6
+selenium3.14+IE11+IEdriver3.14+chrome69+chromediever2.42+Firefox62+geckodriver0.21
+
+自动化环境部署：
+1、安装Python开发环境
+2、安装匹配版本的浏览器
+3、将浏览器的驱动文件存放目录添加到系统path变量中
+4、将浏览器的安装路径添加到path变量中
+5、导入selenium包
+
+
+
+元素定位
+单元素定位：
+id定位：find_element_by_id()
+name定位：find_element_by_name()
+class定位：find_element_by_class_name()，当class的值中有空格时，空格必须使用点代替
+link_text定位：find_element_by_link_text()
+partial_link_text定位：find_element_by_partial_link_text()
+css定位：find_element_by_css_selector()
+         在css中使用class属性定位时，class值前必须加点，class值中的空格必须使用点代替
+         在css中使用id属性定位元素，id的值前必须加#
+
+xpath定位：find_element_by_xpath()，在xpath定位中使用class属性定位时，class属性值中的空格不需要用点代替
+
+tag定位：find_element_by_tag_name()
+find_element():支持以上八中定位方法，需要结合By模块使用
+
+
+多元素定位：
+id定位：find_elements_by_id()
+name定位：find_elements_by_name()
+class定位：find_elements_by_class_name()
+link_text定位：find_elements_by_link_text()
+partial_link_text定位：find_elements_by_partial_link_text()
+css定位：find_elements_by_css_selector()
+xpath定位：find_elements_by_xpath()
+         在xpath定位中使用class属性定位时，class属性值中的空格不需要用点代替
+tag定位：find_elements_by_tag_name()
+find_elements():支持以上八中定位方法，需要结合By模块使用
+
+以上方法定位元素会得到一个列表，使用索引对列表内元素进行操作，
+列表内元素索引按照元素定位到的顺序从0开始依次递增
